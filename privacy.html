@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Datenschutzerklärung für die Android-App Majesto PDF und die zugehörige Website.">
+  <title>Datenschutz / Privacy – Majesto PDF</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt / Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Majesto PDF – Startseite">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>Majesto PDF</span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation / Main navigation">
+        <a href="privacy.html" aria-current="page">Datenschutz / Privacy</a>
+        <a href="imprint.html">Impressum / Imprint</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-shell">
+    <header class="legal-heading">
+      <p class="eyebrow">Majesto PDF · Stand / Effective date · 11.08.2026</p>
+      <h1>Datenschutz­<wbr>erklärung / Privacy notice</h1>
+      <p class="lede">Datenschutzerklärung für die Android-App Majesto PDF und diese GitHub-Pages-Website. Privacy notice for the Majesto PDF Android app and this GitHub Pages website.</p>
+      <nav class="language-jump" aria-label="Sprache / Language">
+        <a href="#de" lang="de">Deutsch</a>
+        <a href="#en" lang="en">English</a>
+      </nav>
+    </header>
+
+    <section id="de" class="document-section" lang="de" aria-labelledby="de-title">
+      <h2 id="de-title">Datenschutzerklärung – Deutsch</h2>
+      <nav class="toc" aria-label="Inhaltsübersicht Deutsch">
+        <strong>Auf dieser Seite</strong>
+        <ul>
+          <li><a href="#de-verantwortlich">Verantwortlicher</a></li>
+          <li><a href="#de-app">Verarbeitung in der App</a></li>
+          <li><a href="#de-billing">Google Play Billing</a></li>
+          <li><a href="#de-website">Website und GitHub Pages</a></li>
+          <li><a href="#de-kontakt">Kontaktaufnahme</a></li>
+          <li><a href="#de-rechte">Ihre Rechte</a></li>
+        </ul>
+      </nav>
+
+      <article id="de-verantwortlich" class="content-card">
+        <h3>1. Verantwortlicher</h3>
+        <address class="address">
+          Manuel Gut<br>
+          Einzelunternehmer<br>
+          Kirchgässle 2<br>
+          78166 Donaueschingen<br>
+          Deutschland<br>
+          E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
+        </address>
+      </article>
+
+      <article id="de-app" class="content-card">
+        <h3>2. Lokale Verarbeitung in Majesto PDF</h3>
+        <p>Majesto PDF ist ein PDF-Reader für Android. Die App benötigt kein Benutzerkonto, enthält keine Werbung und bindet keine eigenen Werbe-, Analyse-, Tracking- oder Crash-Reporting-SDKs ein. PDF-Inhalte werden für die Reader-Funktionen lokal auf dem Gerät verarbeitet und nicht an den Verantwortlichen oder Google übermittelt. Die automatische Betriebsdiagnostik der Google Play Billing Library wird unten gesondert beschrieben.</p>
+        <p>Je nach Nutzung verarbeitet die App folgende Daten im privaten App-Speicher:</p>
+        <ul>
+          <li>URI und Anzeigename bewusst ausgewählter Dokumente, Seitenzahl, letzter Zugriff und letzte Leseposition;</li>
+          <li>Lesezeichen, Favoriten und bewusst gespeicherte lokale Seitennotizen mit Seitenbezug sowie Erstellungs- und Änderungszeit;</li>
+          <li>Theme-Einstellung und die von Android/AppCompat verwaltete App-Sprache;</li>
+          <li>Render-Bitmaps, Vorschaubilder, extrahierten PDF-Text und Suchtreffer vorübergehend im Arbeitsspeicher;</li>
+          <li>den eingegebenen Suchtext und einen noch nicht gespeicherten Notizentwurf über Androids systemverwalteten <code>SavedInstanceState</code>. Diese Zustände können eine Activity- oder Prozessneuerstellung überstehen.</li>
+        </ul>
+        <p>Dokumentmetadaten und gespeicherte Notizen liegen in einer lokalen Room-Datenbank, Einstellungen in DataStore. Der Suchtext und der ungespeicherte Notizentwurf werden erst bei einer bewussten Speicheraktion zur dauerhaften Room-Notiz, können aber über <code>rememberSaveable</code> im systemverwalteten Wiederherstellungszustand fortbestehen, bis dieser UI-Zustand verworfen oder überschrieben wird beziehungsweise Android ihn verwirft. Diese Bereiche sind durch Androids App- und Zustandsverwaltung geschützt und vom regulären Android-Backup ausgeschlossen, derzeit aber nicht zusätzlich verschlüsselt. Die App speichert keine dauerhafte Kopie der PDF in der Datenbank und verändert die Originaldatei durch das Lesen oder durch lokale Seitennotizen nicht.</p>
+        <p>Ist ein Dokumentanbieter nicht direkt seekbar, kann die App vorübergehend eine unverschlüsselte Staging-Kopie im privaten App-Cache <code>pdf-provider-staging</code> anlegen. Die Größe ist technisch begrenzt. Die Kopie wird nach Übergabe an die PDF-Engine unmittelbar entfernt und zusätzlich auf Fehler-, Abbruch-, Sitzungsende- und Neustartpfaden bereinigt. Bis zur Bereinigung besteht trotz App-Sandbox ein Restrisiko.</p>
+        <p>Eine bewusste Auswahl über die Android-Systemdateiauswahl kann Majesto einen persistenten Lesezugriff auf genau diese Dokument-URI gewähren. Ein bestätigter Zugriff bleibt nach dem Schließen der App bestehen, damit das Dokument später aus dem Verlauf geöffnet werden kann. Majesto gibt ihn beim erfolgreichen Entfernen des Dokuments aus dem Verlauf frei; auch Android beziehungsweise der Dokumentanbieter kann ihn entziehen, und das Löschen der App-Daten oder die Deinstallation beendet den appbezogenen Zugriff. Bei nur vorübergehendem Dokumentzugriff speichert Majesto für dieses Dokument keinen Verlauf, keine Position, keine Lesezeichen und keine Notizen. Externe Dokumentanbieter – zum Beispiel eine vom Nutzer gewählte Cloud-Speicher-App – handeln eigenständig und können nach ihren eigenen Datenschutzbestimmungen Daten verarbeiten. Majesto lädt selbst keine PDF in eine Cloud hoch.</p>
+        <p>Rechtsgrundlage für eine uns zurechenbare Verarbeitung zur Bereitstellung der ausdrücklich angeforderten App-Funktionen ist Art. 6 Abs. 1 Buchst. b DSGVO. Sicherheits- und Zuverlässigkeitsmaßnahmen beruhen ergänzend auf unserem berechtigten Interesse an einer sicheren, fehlerarmen App gemäß Art. 6 Abs. 1 Buchst. f DSGVO. Der überwiegende Teil dieser Verarbeitung erfolgt ausschließlich unter Ihrer Kontrolle auf dem Gerät; wir haben keinen Zugriff auf diese lokalen Inhalte.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>3. Prüfzugang für Google Play</h3>
+        <p>Eine für die Google-Play-Prüfung vorgesehene, eingeschränkte Zugriffsmöglichkeit kann autorisierten Prüfern die Premium-Funktion lokal zum Testen freischalten, ohne einen Kauf auszulösen. Eingegebene Prüfzugangsdaten werden ausschließlich auf dem Gerät geprüft und nicht an uns übertragen. Bei erfolgreicher Prüfung speichert die App ausschließlich den aktuellen Versionscode als lokalen Freischaltstatus im privaten App-Speicher. Der Status kann in den Einstellungen deaktiviert werden, wird von einer anderen App-Version ignoriert und wird beim Löschen der App-Daten oder bei der Deinstallation entfernt. Die Zugangsdaten selbst werden nicht in dieser Datenschutzerklärung veröffentlicht.</p>
+      </article>
+
+      <article id="de-billing" class="content-card">
+        <h3>4. Optionaler Premium-Einmalkauf über Google Play</h3>
+        <p>Die App verbindet Google Play Billing Library 9.1.0 beim Start und beim Fortsetzen der App mit Google Play, um die optionale Kaufmöglichkeit, den Produktstatus und vorhandene Berechtigungen bereitzustellen. Erst eine ausdrückliche Nutzeraktion startet den Kaufdialog für <code>premium_unlock</code>. Die App kann dabei Produkt-ID, paketbezogene Angaben, lokalisierten Preis, Kaufzustand, Menge, Bestätigungsstatus und einen von Google Play bereitgestellten Kauf-Token verarbeiten. Der Kauf-Token wird ausschließlich flüchtig zur Prüfung und Bestätigung verwendet und nicht dauerhaft im Majesto-App-Speicher abgelegt oder geloggt. Bestellnummer und Kaufsignatur werden dort ebenfalls nicht gespeichert.</p>
+        <p>Dauerhaft speichert Majesto einen booleschen Offline-Cache, ob Premium zuletzt durch eine erfolgreiche Play-Abfrage bestätigt wurde. Ein kurzer technischer Widerrufsmarker kann verhindern, dass ein alter positiver Cachewert nach einem unterbrochenen Schreibvorgang erneut freischaltet. PDF-Dateien, PDF-Texte, Dokument-URIs, Suchtexte, Suchtreffer, Lesezeichen, Lesepositionen sowie gespeicherte oder ungespeicherte Notizen werden nicht an Google Play Billing oder dessen Diagnosetransport übergeben.</p>
+        <p>Unabhängig davon, ob ein Kauf gestartet wird, kann die Billing Library automatische Betriebs- und Diagnosedaten über Google DataTransport/CCT an Google senden. Dazu zählen je nach Ereignis insbesondere Billing-Ablauf- und Ereignistypen, Antwort-, Ergebnis- und Fehlercodes, Latenzen und Zeitstempel, Paket-, App- und SDK-Versionen, eine zufällige Billing-Sitzungskennung sowie technische Geräte-, Android-/Build-, Hardware-, Arbeitsspeicher-, Netzwerk-, Locale-/Länder-, Zeitzonen- und SIM-Operator-Angaben. Beim Verbindungsaufbau fällt technisch außerdem die IP-Adresse an. Für die Google-Play-Datensicherheitserklärung behandeln wir dies konservativ als App-Interaktionen, Diagnosedaten, Gerät oder andere IDs sowie – wegen einer möglichen IP-basierten Ableitung – ungefähren Standort. Die App greift nicht auf GPS oder präzisen Standort zu und fordert keine Android-Standortberechtigung an. Ein Kauf betrifft zusätzlich den Kaufverlauf; Majesto verarbeitet keine Kreditkarten- oder Bankdaten. Die Übertragung erfolgt per HTTPS.</p>
+        <p>Vor dem Upload puffert CCT Ereignisse in einer privaten SQLite-Warteschlange. Diese ist auf 10 MiB begrenzt; erfolgreiche Uploads werden lokal entfernt, fehlgeschlagene mit Bibliotheks-Backoff erneut versucht und Ereignisse nach sieben Tagen von der lokalen Altersbereinigung erfasst. App-Daten löschen oder Deinstallation entfernt diese Queue. Die serverseitige Speicherdauer bei Google ist aus dem eingebundenen SDK nicht bestimmbar.</p>
+        <p>Rechtsgrundlage für den tatsächlichen Kauf und dessen Freischaltung ist Art. 6 Abs. 1 Buchst. b DSGVO. Die Bereitstellung und zuverlässige Diagnose der optionalen Kaufmöglichkeit sowie Missbrauchsvermeidung stützen wir auf unser berechtigtes Interesse gemäß Art. 6 Abs. 1 Buchst. f DSGVO; gesetzliche Nachweis- oder Aufbewahrungspflichten auf Art. 6 Abs. 1 Buchst. c DSGVO. Je nach Play-Händlerkonfiguration und Land kann Google dem Herausgeber Bestell-, Abrechnungs- oder Supportinformationen bereitstellen. Soweit dies geschieht, verarbeiten wir diese Daten zur Vertragsabwicklung, für Supportanfragen sowie zur Erfüllung gesetzlicher Nachweis- und Aufbewahrungspflichten und löschen sie nach Ablauf der jeweils anwendbaren Fristen. Google kann Daten in den USA oder anderen Drittländern verarbeiten. Google beschreibt abhängig von Dienst, beteiligter Gesellschaft und Einzelfall Angemessenheitsbeschlüsse – einschließlich des EU-US Data Privacy Framework für entsprechend zertifizierte Empfänger – und/oder Standardvertragsklauseln als mögliche Übermittlungsmechanismen. Welcher Mechanismus konkret gilt, kann sich ändern. Weitere Informationen finden Sie in der <a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a> und in Googles <a href="https://policies.google.com/privacy/frameworks">Informationen zu Datenübermittlungen</a>.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>5. Berechtigungen und Netzwerk</h3>
+        <p>Die Android-Systemdateiauswahl gewährt nur Zugriff auf die vom Nutzer ausgewählte Datei. Die App fordert keine breite Foto-, Medien- oder Speicherberechtigung an. Für Google Play Billing enthält sie die Berechtigungen <code>com.android.vending.BILLING</code>, <code>INTERNET</code> und <code>ACCESS_NETWORK_STATE</code>. Die App besitzt keinen eigenen allgemeinen HTTP-Client, kein eigenes Analyse- oder Crash-Reporting-SDK und überträgt keine PDF-Inhalte. Die oben beschriebene automatische Billing-Betriebsdiagnostik ist die Ausnahme. Die Reader-Grundfunktion, Suche, Verlauf, Leseposition, Lesezeichen und lokale Notizen funktionieren unabhängig vom Premium-Kauf.</p>
+      </article>
+
+      <article id="de-website" class="content-card">
+        <h3>6. Diese Website und GitHub Pages</h3>
+        <p>Diese Website ist statisch. Wir binden kein JavaScript, keine Werbung, keine Analyse- oder Marketingdienste, keine externen Schriftarten und keine Social-Media-Plugins ein. Wir setzen selbst keine Cookies und führen keine eigene Besucheranalyse oder eigene Server-Logdatei.</p>
+        <p>Die Seite wird über GitHub Pages bereitgestellt, einen Dienst von GitHub. Beim Aufruf verbindet sich Ihr Browser technisch mit GitHub. GitHub kann dabei insbesondere IP-Adresse, Geräte- und Browserinformationen, angeforderte Seite, Referrer sowie Datum und Uhrzeit der Anfrage verarbeiten und erforderliche Technologien nach den eigenen Bedingungen einsetzen. Auf diese Verarbeitung durch GitHub haben wir keinen unmittelbaren technischen Zugriff. Die Bereitstellung erfolgt in unserem berechtigten Interesse an einer sicheren, zuverlässigen und leicht erreichbaren Rechtsinformation gemäß Art. 6 Abs. 1 Buchst. f DSGVO.</p>
+        <p>Eine Verarbeitung durch GitHub kann auch in den USA oder anderen Drittländern stattfinden. GitHub beschreibt abhängig von beteiligter Gesellschaft, Dienst und Einzelfall insbesondere Angemessenheitsbeschlüsse – einschließlich des EU-US Data Privacy Framework für entsprechend zertifizierte Empfänger – und/oder Standardvertragsklauseln als mögliche Übermittlungsmechanismen. Welche Grundlage konkret gilt und ob eine Zertifizierung fortbesteht, kann sich ändern. Informationen zu Verantwortlichkeit, Rechtsgrundlagen, Übermittlungsmechanismen, Empfängern und Speicherdauer stellt GitHub in seiner <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a> bereit.</p>
+      </article>
+
+      <article id="de-kontakt" class="content-card">
+        <h3>7. Kontaktaufnahme per E-Mail</h3>
+        <p>Wenn Sie uns eine E-Mail senden, verarbeiten wir Ihre Absenderadresse, den Nachrichteninhalt, technische Nachrichtenmetadaten und alle freiwillig übermittelten Angaben, um Ihr Anliegen zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. b DSGVO, wenn Ihre Nachricht auf einen Vertrag oder vorvertragliche Maßnahmen gerichtet ist, andernfalls unser berechtigtes Interesse an sachgerechter Kommunikation gemäß Art. 6 Abs. 1 Buchst. f DSGVO. Gesetzlich erforderliche Aufbewahrung erfolgt nach Art. 6 Abs. 1 Buchst. c DSGVO.</p>
+        <p>Wir löschen Anfragen, sobald sie abschließend bearbeitet sind und keine gesetzlichen Aufbewahrungspflichten oder berechtigten Gründe – etwa die Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen – entgegenstehen. Bitte senden Sie keine PDF-Dokumente oder sonstigen vertraulichen Inhalte, wenn sie für Ihre Anfrage nicht erforderlich sind.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>8. Empfänger, Speicherdauer und Löschung</h3>
+        <p>Empfänger können Google bei der automatischen Billing-Betriebsdiagnostik und im Rahmen eines Play-Kaufs, GitHub beim Besuch dieser Website sowie beteiligte E-Mail-Dienstleister bei einer Kontaktaufnahme sein. Externe Dokumentanbieter werden allein durch Ihre bewusste Auswahl tätig. Wir verkaufen keine personenbezogenen Daten.</p>
+        <ul>
+          <li>Lokale Notizen können in der App gelöscht werden.</li>
+          <li>Beim Entfernen eines Dokuments aus dem Verlauf werden zugehörige lokale Metadaten, Lesezeichen und Notizen gelöscht; die Original-PDF bleibt unverändert.</li>
+          <li>Temporäre Staging-Daten werden nach ihrem technischen Zweck schnellstmöglich entfernt.</li>
+          <li>Suchtext und ein ungespeicherter Notizentwurf werden nicht in Room gespeichert, können aber im systemverwalteten Wiederherstellungszustand fortbestehen, bis der UI-Zustand oder Android sie verwirft. App-Daten löschen oder Deinstallation entfernt appbezogenen Wiederherstellungszustand.</li>
+          <li>Die lokale CCT-Warteschlange entfernt erfolgreiche Uploads, versucht fehlgeschlagene erneut und ist für eine Altersbereinigung nach sieben Tagen konfiguriert; Google-seitige Aufbewahrungsfristen sind aus dem SDK nicht bestimmbar.</li>
+          <li>Das Löschen der App-Daten oder die Deinstallation entfernt den privaten App-Speicher.</li>
+          <li>Eine erfolgreiche Play-Abfrage ohne passenden abgeschlossenen Kauf setzt den lokalen Premium-Cache zurück. Der Kaufbeleg und gegebenenfalls für den Herausgeber zugängliche Transaktionsdaten werden nach den jeweils geltenden Google- und gesetzlichen Vorgaben verwaltet.</li>
+          <li>Für GitHub- und Google-Daten gelten zusätzlich die von diesen Anbietern veröffentlichten Speicherregeln.</li>
+        </ul>
+      </article>
+
+      <article id="de-rechte" class="content-card">
+        <h3>9. Ihre Datenschutzrechte</h3>
+        <p>Soweit die gesetzlichen Voraussetzungen vorliegen, haben Sie das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch. Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen. Bei Verarbeitungen nach Art. 6 Abs. 1 Buchst. f DSGVO können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch einlegen.</p>
+        <p>Für Anfragen nutzen Sie bitte <a href="mailto:info@alpha02.de">info@alpha02.de</a>. Beachten Sie, dass wir auf ausschließlich lokal in der App gespeicherte Daten technisch nicht zugreifen können; diese verwalten und löschen Sie direkt auf Ihrem Gerät.</p>
+        <p>Sie haben außerdem das Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde. Für den Verantwortlichen ist grundsätzlich der <a href="https://www.baden-wuerttemberg.datenschutz.de/beschwerde/">Landesbeauftragte für den Datenschutz und die Informationsfreiheit Baden-Württemberg (LfDI BW)</a> zuständig. Sie können sich auch an eine andere zuständige Aufsichtsbehörde wenden.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>10. Automatisierte Entscheidungen und Änderungen</h3>
+        <p>Wir führen keine automatisierte Entscheidungsfindung einschließlich Profiling im Sinne von Art. 22 DSGVO durch. Wir aktualisieren diese Erklärung, wenn sich Funktionen, Anbieter oder rechtliche Anforderungen ändern. Das oben angegebene Wirksamkeitsdatum kennzeichnet den aktuellen Stand.</p>
+      </article>
+    </section>
+
+    <section id="en" class="document-section" lang="en" aria-labelledby="en-title">
+      <h2 id="en-title">Privacy notice – English</h2>
+      <nav class="toc" aria-label="English contents">
+        <strong>On this page</strong>
+        <ul>
+          <li><a href="#en-controller">Controller</a></li>
+          <li><a href="#en-app">Processing in the app</a></li>
+          <li><a href="#en-billing">Google Play Billing</a></li>
+          <li><a href="#en-website">Website and GitHub Pages</a></li>
+          <li><a href="#en-contact">Contact by email</a></li>
+          <li><a href="#en-rights">Your rights</a></li>
+        </ul>
+      </nav>
+
+      <article id="en-controller" class="content-card">
+        <h3>1. Controller</h3>
+        <address class="address">
+          Manuel Gut<br>
+          Sole proprietor<br>
+          Kirchgässle 2<br>
+          78166 Donaueschingen<br>
+          Germany<br>
+          Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
+        </address>
+      </article>
+
+      <article id="en-app" class="content-card">
+        <h3>2. Local processing in Majesto PDF</h3>
+        <p>Majesto PDF is a PDF reader for Android. The app does not require an account, contains no advertising, and embeds no first-party advertising, analytics, tracking, or crash-reporting SDKs. PDF content is processed locally on the device for reader features and is not transmitted to the controller or Google. Automatic operational diagnostics from the Google Play Billing Library are described separately below.</p>
+        <p>Depending on how you use the app, it processes the following data in private app storage:</p>
+        <ul>
+          <li>the URI and display name of documents you deliberately select, page count, last access, and last reading position;</li>
+          <li>bookmarks, favourites, and deliberately saved local page notes with page reference and creation/modification timestamps;</li>
+          <li>the theme setting and app language managed by Android/AppCompat;</li>
+          <li>rendered bitmaps, thumbnails, extracted PDF text, and search results temporarily in memory;</li>
+          <li>entered search text and a not-yet-saved note draft through Android's system-managed <code>SavedInstanceState</code>. These states may survive Activity or process recreation.</li>
+        </ul>
+        <p>Document metadata and saved notes are held in a local Room database; settings use DataStore. Search text and the unsaved note draft only become a durable Room note after an explicit save action, but <code>rememberSaveable</code> may retain them in system-managed restoration state until that UI state is discarded or replaced, or Android discards it. Android's app and state management protects these areas and regular Android backup is disabled, but they are not additionally encrypted at present. The app does not keep a permanent PDF copy in its database and does not alter the original file merely by reading it or adding local page notes.</p>
+        <p>If a document provider is not directly seekable, the app may briefly create an unencrypted staging copy in the private <code>pdf-provider-staging</code> app cache. Its size is technically limited. The copy is removed immediately after transfer to the PDF engine and is also cleaned up on error, cancellation, session end, and restart paths. Despite the app sandbox, a residual risk remains until cleanup completes.</p>
+        <p>A deliberate selection through Android's system file picker may grant Majesto persistent read access to that specific document URI. A confirmed grant remains after the app closes so that the document can be reopened from history. Majesto releases it when the document is successfully removed from history; Android or the document provider may also revoke it, and clearing app data or uninstalling the app ends app-related access. Where document access is only temporary, Majesto stores no history, position, bookmarks, or notes for that document. External document providers – for example, a cloud storage app you choose – act independently and may process data under their own privacy terms. Majesto itself does not upload a PDF to the cloud.</p>
+        <p>Where processing attributable to us is necessary to provide features you expressly request, the legal basis is Article 6(1)(b) GDPR. Security and reliability measures additionally rely on our legitimate interest in a secure, reliable app under Article 6(1)(f) GDPR. Most of this processing takes place solely under your control on the device; we cannot access this local content.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>3. Google Play reviewer access</h3>
+        <p>A restricted access path intended for Google Play review may allow authorised reviewers to activate the Premium feature locally for testing without initiating a purchase. Review credentials entered there are checked only on the device and are not sent to us. After successful verification, the app stores only the current version code as a local review entitlement in private app storage. The entitlement can be deactivated in Settings, is ignored by a different app version, and is removed when app data is cleared or the app is uninstalled. The credentials themselves are not published in this privacy notice.</p>
+      </article>
+
+      <article id="en-billing" class="content-card">
+        <h3>4. Optional one-time Premium purchase through Google Play</h3>
+        <p>The app connects Google Play Billing Library 9.1.0 to Google Play when the app starts and resumes in order to provide the optional purchase capability, product status, and existing entitlements. Only an explicit user action starts the purchase dialog for <code>premium_unlock</code>. The app may process the product ID, package-related information, localised price, purchase state, quantity, acknowledgement state, and a purchase token supplied by Google Play. The purchase token is used transiently only for validation and acknowledgement; it is not stored persistently in Majesto's app storage or logged. Order IDs and purchase signatures are not stored there either.</p>
+        <p>Majesto persistently stores a Boolean offline cache indicating whether Premium was last confirmed by a successful Play query. A short-lived technical revocation marker may prevent a stale positive cache from unlocking Premium after an interrupted write. PDF files, PDF text, document URIs, search text, search results, bookmarks, reading positions, and saved or unsaved notes are not provided to Google Play Billing or its diagnostic transport.</p>
+        <p>Whether or not a purchase is started, the Billing Library may send automatic operational and diagnostic data to Google through Google DataTransport/CCT. Depending on the event, this includes Billing flow and event types, response, result, and error codes, latency and timestamps, package, app, and SDK versions, a random Billing session identifier, and technical device, Android/build, hardware, memory, network, locale/country, time-zone, and SIM-operator information. The IP address is also necessarily exposed when the connection is established. For Google Play's Data safety form, we conservatively treat these fields as app interactions, diagnostics, device or other IDs, and – because IP may permit an inference – approximate location. The app does not access GPS or precise location and requests no Android location permission. A purchase additionally concerns purchase history; Majesto does not process credit-card or bank details. Transmission uses HTTPS.</p>
+        <p>Before upload, CCT buffers events in a private SQLite queue. It is limited to 10 MiB; successful uploads are removed locally, failed uploads are retried with library backoff, and events are subject to local age cleanup after seven days. Clearing app data or uninstalling the app removes this queue. Google's server-side retention period cannot be determined from the embedded SDK.</p>
+        <p>The legal basis for the actual purchase and entitlement is Article 6(1)(b) GDPR. We rely on our legitimate interests under Article 6(1)(f) GDPR to provide and reliably diagnose the optional purchase capability and prevent abuse; legal record-keeping duties rely on Article 6(1)(c) GDPR. Depending on the Play merchant configuration and country, Google may make order, billing, or support information available to the publisher. Where this occurs, we process that data to perform the contract, handle support requests, and comply with statutory record-keeping and retention duties, and delete it after the applicable retention periods expire. Google may process data in the United States or other third countries. Depending on the service, entity, and circumstances, Google describes adequacy decisions – including the EU-US Data Privacy Framework for appropriately certified recipients – and/or Standard Contractual Clauses as possible transfer mechanisms. The mechanism that applies may change. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and Google's <a href="https://policies.google.com/privacy/frameworks">information on data transfer frameworks</a>.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>5. Permissions and network access</h3>
+        <p>The Android system file picker grants access only to a file you select. The app requests no broad photo, media, or storage permission. For Google Play Billing it includes <code>com.android.vending.BILLING</code>, <code>INTERNET</code>, and <code>ACCESS_NETWORK_STATE</code>. The app has no general-purpose HTTP client, first-party analytics SDK, or crash-reporting SDK and sends no PDF content. The automatic Billing operational diagnostics described above are the exception. Core reading, search, history, reading position, bookmarks, and local notes work independently of the Premium purchase.</p>
+      </article>
+
+      <article id="en-website" class="content-card">
+        <h3>6. This website and GitHub Pages</h3>
+        <p>This is a static website. We embed no JavaScript, advertising, analytics or marketing services, external fonts, or social media plugins. We do not set our own cookies or operate our own visitor analytics or server logs.</p>
+        <p>The site is delivered through GitHub Pages, a GitHub service. When you visit, your browser must connect technically to GitHub. GitHub may process data such as your IP address, device and browser information, requested page, referrer, and request date/time, and may use necessary technologies under its own terms. We do not have direct technical access to this processing by GitHub. Our legal basis for making the legal information securely, reliably, and conveniently available is our legitimate interest under Article 6(1)(f) GDPR.</p>
+        <p>GitHub may process data in the United States or other third countries. Depending on the entity, service, and circumstances, GitHub describes adequacy decisions – including the EU-US Data Privacy Framework for appropriately certified recipients – and/or Standard Contractual Clauses as possible transfer mechanisms. The specific basis and continued certification may change. GitHub explains its responsibility, legal bases, transfer mechanisms, recipients, and retention in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub General Privacy Statement</a>.</p>
+      </article>
+
+      <article id="en-contact" class="content-card">
+        <h3>7. Contact by email</h3>
+        <p>If you email us, we process your sender address, message content, technical message metadata, and any information you voluntarily provide in order to respond. The legal basis is Article 6(1)(b) GDPR where your message concerns a contract or pre-contractual steps; otherwise, it is our legitimate interest in appropriate communication under Article 6(1)(f) GDPR. Legally required retention is based on Article 6(1)(c) GDPR.</p>
+        <p>We delete enquiries once they have been conclusively handled unless statutory retention duties or legitimate reasons – such as establishing, exercising, or defending legal claims – require longer retention. Please do not send PDF documents or other confidential content unless needed for your enquiry.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>8. Recipients, retention, and deletion</h3>
+        <p>Recipients may include Google for automatic Billing operational diagnostics and a Play purchase, GitHub when you visit this website, and the email services involved when you contact us. External document providers act only following your deliberate selection. We do not sell personal data.</p>
+        <ul>
+          <li>Local notes can be deleted in the app.</li>
+          <li>Removing a document from history deletes its local metadata, bookmarks, and notes; the original PDF remains unchanged.</li>
+          <li>Temporary staging data is removed as soon as its technical purpose ends.</li>
+          <li>Search text and an unsaved note draft are not stored in Room, but may remain in system-managed restoration state until the UI state or Android discards them. Clearing app data or uninstalling removes app-related restoration state.</li>
+          <li>The local CCT queue removes successful uploads, retries failed uploads, and is configured for age cleanup after seven days; Google's server-side retention cannot be determined from the SDK.</li>
+          <li>Clearing app data or uninstalling the app removes private app storage.</li>
+          <li>A successful Play query without the matching completed purchase resets the local Premium cache. The purchase record and any transaction data available to the publisher are managed under the applicable Google and statutory rules.</li>
+          <li>Data handled by GitHub and Google is additionally subject to their published retention rules.</li>
+        </ul>
+      </article>
+
+      <article id="en-rights" class="content-card">
+        <h3>9. Your data protection rights</h3>
+        <p>Where the statutory requirements apply, you have rights of access, rectification, erasure, restriction, portability, and objection. You may withdraw consent at any time with future effect. Where processing relies on Article 6(1)(f) GDPR, you may object on grounds relating to your particular situation.</p>
+        <p>To exercise your rights, email <a href="mailto:info@alpha02.de">info@alpha02.de</a>. Please note that we cannot technically access data stored exclusively inside the app; you manage and delete it directly on your device.</p>
+        <p>You also have the right to lodge a complaint with a data protection supervisory authority. The authority generally responsible for the controller is the <a href="https://www.baden-wuerttemberg.datenschutz.de/beschwerde/">State Commissioner for Data Protection and Freedom of Information Baden-Württemberg (LfDI BW)</a>. You may also contact another competent supervisory authority.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>10. Automated decisions and changes</h3>
+        <p>We do not carry out automated decision-making, including profiling, within the meaning of Article 22 GDPR. We update this notice when app features, providers, or legal requirements change. The effective date above identifies the current version.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Manuel Gut · Majesto PDF</p>
+      <nav class="footer-links" aria-label="Fußnavigation / Footer navigation">
+        <a href="index.html">Start / Home</a>
+        <a href="imprint.html">Impressum / Imprint</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
