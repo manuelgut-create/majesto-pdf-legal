@@ -16,18 +16,19 @@ Der App-Text grenzt zwischen Majesto und eingebundenen Bibliotheken ab: Die App 
 
 ## Veröffentlichung über GitHub Pages
 
-1. Inhalt dieses Ordners in ein öffentliches Repository mit dem Namen `majesto-pdf-legal` übernehmen.
-2. In den Repository-Einstellungen unter **Pages** die Veröffentlichung aus dem Root-Verzeichnis des Standard-Branches aktivieren.
-3. Nach der Bereitstellung alle drei Seiten und sämtliche internen Links unter der von GitHub angezeigten HTTPS-URL prüfen.
-4. Die endgültigen URLs für `privacy.html` und `imprint.html` in Majesto PDF und in der Google Play Console hinterlegen.
-
-Für das bestätigte GitHub-Konto `manuelgut-create` sind nach einer späteren Veröffentlichung ohne eigene Domain diese URLs vorgesehen:
+Die Seiten wurden am 11.08.2026 im öffentlichen Repository
+`manuelgut-create/majesto-pdf-legal` (Commit
+`a50ad524454c59eada91c81d25e0454dd5e8ea82`) aus `main`/`root`
+über GitHub Pages veröffentlicht. Der Pages-Workflow lief erfolgreich durch;
+Startseite, Datenschutz und Impressum wurden anschließend live geprüft:
 
 - `https://manuelgut-create.github.io/majesto-pdf-legal/`
 - `https://manuelgut-create.github.io/majesto-pdf-legal/privacy.html`
 - `https://manuelgut-create.github.io/majesto-pdf-legal/imprint.html`
 
-Die lokale Fassung ist mit den am 11.08.2026 bestätigten Herausgeberangaben zur Veröffentlichung vorbereitet. Eine Veröffentlichung wurde noch nicht durchgeführt; die vorgesehenen URLs sind deshalb weiterhin nicht als erreichbar verifiziert. Die HTML-Dateien verwenden relative interne Links und funktionieren damit auch unter einer späteren eigenen Domain.
+Die Datenschutz-URL ist außerdem als gespeicherte Änderung in der Google Play
+Console hinterlegt. Die HTML-Dateien verwenden relative interne Links und
+funktionieren damit auch unter einer späteren eigenen Domain.
 
 ## Prüfung vor externer Veröffentlichung
 
@@ -40,16 +41,26 @@ Diese Texte bilden den technisch bekannten Stand vom 11.08.2026 ab, ersetzen abe
 - die App-Entwicklung und der App-Vertrieb sind keine in diesem Projekt erkennbare zulassungspflichtige oder berufsrechtlich geregelte Tätigkeit;
 - als unmittelbar erreichbarer elektronischer Kontakt wird `info@alpha02.de` verwendet; eine Telefonnummer wird auf diesen Rechtsseiten nicht veröffentlicht.
 
-Vor Veröffentlichung beziehungsweise mit jeder wesentlichen Produkt- oder Unternehmensänderung sollte der Herausgeber insbesondere erneut prüfen:
+Mit jeder wesentlichen Produkt- oder Unternehmensänderung und vor einem
+öffentlichen Play-Release sollte der Herausgeber insbesondere erneut prüfen:
 
 - ob Name, ladungsfähige Anschrift und Kontaktadresse exakt und dauerhaft erreichbar sind;
 - ob die bestätigten Anbieter-, Steuer- und Kontaktdaten unverändert sind;
+- ob im ELSTER-Postfach beziehungsweise durch das BZSt inzwischen eine
+  Wirtschafts-Identifikationsnummer zugeteilt wurde; eine vorhandene W-IdNr.
+  muss gegebenenfalls ergänzt werden, persönliche Steuer-ID und Steuernummer
+  dürfen dagegen nicht veröffentlicht werden;
+- ob neben E-Mail ein zweiter tatsächlich schneller, unmittelbarer und
+  wirksamer Kontaktweg bereitgestellt werden muss. Eine Telefonnummer ist nach
+  der EuGH-Rechtsprechung nicht zwingend, E-Mail allein ist für diesen zweiten
+  Weg jedoch nicht rechtssicher belegt; ein echtes, überwachtes Kontaktformular
+  wäre eine mögliche Alternative;
 - ob inzwischen eine besondere Verpflichtung zur Teilnahme an einer Verbraucherschlichtung besteht oder sich die Beschäftigtenzahl geändert hat;
 - ob inzwischen ein Datenschutzbeauftragter benannt wurde oder aufgrund geänderter Verarbeitungsvorgänge benannt werden muss;
 - ob Google-Play-Verkäuferdaten, steuerliche Einordnung und tatsächlicher Kaufablauf mit dem Text übereinstimmen;
 - ob das finale Billing-Artefakt weiterhin dieselben Betriebsdiagnosedaten, Endpunkte, lokalen Queue-Grenzen und Aufbewahrungsregeln verwendet;
 - ob der lokale Google-Play-Prüfzugang genauso implementiert ist wie beschrieben;
-- ob GitHub Pages, E-Mail-Anbieter und mögliche Drittlandübermittlungen vor Veröffentlichung unverändert sind;
+- ob GitHub Pages, E-Mail-Anbieter und mögliche Drittlandübermittlungen unverändert sind;
 - ob die endgültigen Play-Data-Safety-Angaben denselben Produktstand beschreiben.
 
 Die öffentliche Fassung enthält weder eine Registerangabe noch eine Aufsichtsbehörde, berufsrechtliche Angaben, einen Datenschutzbeauftragten oder eine allgemeine Erklärung zur Verbraucherstreitbeilegung, weil diese Angaben nach dem bestätigten Stand nicht einschlägig sind. Werden später Beschäftigte eingestellt, ein Datenschutzbeauftragter benannt, eine Register- oder Steuer-ID erteilt oder eine besonders regulierte Tätigkeit aufgenommen, müssen die Seiten vor der nächsten Veröffentlichung aktualisiert werden. Bei weltweiter IAP-Ausspielung ist unabhängig vom deutschen Impressum zusätzlich zu prüfen, ob einzelne Play-Store-Märkte – insbesondere Japan – eine öffentliche Telefonnummer verlangen.
