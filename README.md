@@ -14,9 +14,11 @@ Die Seiten verwenden kein JavaScript, keine Cookies aus eigenem Code, keine Anal
 
 Der App-Text grenzt zwischen Majesto und eingebundenen Bibliotheken ab: Die App enthält keine Werbung und keine eigenen Analyse-, Tracking- oder Crash-Reporting-SDKs. Google Play Billing Library 9.1.0 erzeugt jedoch beim automatischen Start-/Resume-Verbindungsablauf Betriebsdiagnostik und übermittelt sie per HTTPS über Google DataTransport/CCT an Google. Die zweisprachige Erklärung benennt Datenkategorien, die lokale CCT-SQLite-Queue (maximal 10 MiB, lokaler Sieben-Tage-Cleanup und Retry), die nicht aus dem SDK bestimmbare Google-Serveraufbewahrung sowie den Ausschluss von PDF-, Such- und Notizinhalten.
 
+Der Stand vom 16.08.2026 ergänzt außerdem DE/EN die bewusst nutzerinitiierte Share-Übergabe: Erst nach Auswahl von „PDF teilen“ erhält die im Android-System-Chooser gewählte externe App ein temporäres Leserecht; Majesto wählt keinen Empfänger vor und lädt nicht selbst hoch. Die Veröffentlichung dieses Stands wird gemeinsam mit den vc3-Store-Unterlagen verifiziert.
+
 ## Veröffentlichung über GitHub Pages
 
-Die Seiten wurden am 11.08.2026 im öffentlichen Repository
+Der vorherige Seitenstand wurde am 11.08.2026 im öffentlichen Repository
 `manuelgut-create/majesto-pdf-legal` (Commit
 `a50ad524454c59eada91c81d25e0454dd5e8ea82`) aus `main`/`root`
 über GitHub Pages veröffentlicht. Der Pages-Workflow lief erfolgreich durch;
@@ -30,9 +32,11 @@ Die Datenschutz-URL ist außerdem als gespeicherte Änderung in der Google Play
 Console hinterlegt. Die HTML-Dateien verwenden relative interne Links und
 funktionieren damit auch unter einer späteren eigenen Domain.
 
+Die Veröffentlichung wird erst als abgeschlossen dokumentiert, wenn die Share-Offenlegung nach dem Push auf der öffentlichen Datenschutz-URL live zurückgelesen wurde.
+
 ## Prüfung vor externer Veröffentlichung
 
-Diese Texte bilden den technisch bekannten Stand vom 11.08.2026 ab, ersetzen aber keine individuelle Rechtsberatung. Eingetragen beziehungsweise bei nicht einschlägigen Pflichtfeldern bewusst nicht öffentlich aufgeführt wurden folgende bestätigte Angaben:
+Die lokalen Texte bilden den technisch bekannten Stand vom 16.08.2026 ab, ersetzen aber keine individuelle Rechtsberatung. Eingetragen beziehungsweise bei nicht einschlägigen Pflichtfeldern bewusst nicht öffentlich aufgeführt wurden folgende bestätigte Angaben:
 
 - Anbieter ist Manuel Gut als Einzelunternehmer; „Alpha02“ ist kein Handelsname, sondern erscheint ausschließlich als Domain der Kontaktadresse;
 - es besteht keine Handelsregistereintragung;

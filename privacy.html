@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Datenschutzerklärung für die Android-App Majesto PDF und die zugehörige Website.">
   <title>Datenschutz / Privacy – Majesto PDF</title>
   <link rel="stylesheet" href="styles.css">
@@ -25,7 +25,7 @@
 
   <main id="main" class="page-shell">
     <header class="legal-heading">
-      <p class="eyebrow">Majesto PDF · Stand / Effective date · 11.08.2026</p>
+      <p class="eyebrow">Majesto PDF · Stand / Effective date · 16.08.2026</p>
       <h1>Datenschutz­<wbr>erklärung / Privacy notice</h1>
       <p class="lede">Datenschutzerklärung für die Android-App Majesto PDF und diese GitHub-Pages-Website. Privacy notice for the Majesto PDF Android app and this GitHub Pages website.</p>
       <nav class="language-jump" aria-label="Sprache / Language">
@@ -74,6 +74,7 @@
         <p>Dokumentmetadaten und gespeicherte Notizen liegen in einer lokalen Room-Datenbank, Einstellungen in DataStore. Der Suchtext und der ungespeicherte Notizentwurf werden erst bei einer bewussten Speicheraktion zur dauerhaften Room-Notiz, können aber über <code>rememberSaveable</code> im systemverwalteten Wiederherstellungszustand fortbestehen, bis dieser UI-Zustand verworfen oder überschrieben wird beziehungsweise Android ihn verwirft. Diese Bereiche sind durch Androids App- und Zustandsverwaltung geschützt und vom regulären Android-Backup ausgeschlossen, derzeit aber nicht zusätzlich verschlüsselt. Die App speichert keine dauerhafte Kopie der PDF in der Datenbank und verändert die Originaldatei durch das Lesen oder durch lokale Seitennotizen nicht.</p>
         <p>Ist ein Dokumentanbieter nicht direkt seekbar, kann die App vorübergehend eine unverschlüsselte Staging-Kopie im privaten App-Cache <code>pdf-provider-staging</code> anlegen. Die Größe ist technisch begrenzt. Die Kopie wird nach Übergabe an die PDF-Engine unmittelbar entfernt und zusätzlich auf Fehler-, Abbruch-, Sitzungsende- und Neustartpfaden bereinigt. Bis zur Bereinigung besteht trotz App-Sandbox ein Restrisiko.</p>
         <p>Eine bewusste Auswahl über die Android-Systemdateiauswahl kann Majesto einen persistenten Lesezugriff auf genau diese Dokument-URI gewähren. Ein bestätigter Zugriff bleibt nach dem Schließen der App bestehen, damit das Dokument später aus dem Verlauf geöffnet werden kann. Majesto gibt ihn beim erfolgreichen Entfernen des Dokuments aus dem Verlauf frei; auch Android beziehungsweise der Dokumentanbieter kann ihn entziehen, und das Löschen der App-Daten oder die Deinstallation beendet den appbezogenen Zugriff. Bei nur vorübergehendem Dokumentzugriff speichert Majesto für dieses Dokument keinen Verlauf, keine Position, keine Lesezeichen und keine Notizen. Externe Dokumentanbieter – zum Beispiel eine vom Nutzer gewählte Cloud-Speicher-App – handeln eigenständig und können nach ihren eigenen Datenschutzbestimmungen Daten verarbeiten. Majesto lädt selbst keine PDF in eine Cloud hoch.</p>
+        <p>Wenn Sie im Reader „PDF teilen“ wählen, übergibt Majesto die geöffnete Dokument-URI mit einem temporären Leserecht über Androids System-Auswahldialog an die von Ihnen anschließend ausgewählte externe App. Majesto wählt keinen Empfänger vor und lädt die Datei nicht selbst hoch. Ab der Übergabe verarbeitet die Ziel-App die PDF nach ihren eigenen Datenschutz-, Speicher- und Netzwerkregeln. Teilen Sie vertrauliche Dokumente deshalb nur mit vertrauenswürdigen Ziel-Apps und Empfängern.</p>
         <p>Rechtsgrundlage für eine uns zurechenbare Verarbeitung zur Bereitstellung der ausdrücklich angeforderten App-Funktionen ist Art. 6 Abs. 1 Buchst. b DSGVO. Sicherheits- und Zuverlässigkeitsmaßnahmen beruhen ergänzend auf unserem berechtigten Interesse an einer sicheren, fehlerarmen App gemäß Art. 6 Abs. 1 Buchst. f DSGVO. Der überwiegende Teil dieser Verarbeitung erfolgt ausschließlich unter Ihrer Kontrolle auf dem Gerät; wir haben keinen Zugriff auf diese lokalen Inhalte.</p>
       </article>
 
@@ -111,7 +112,7 @@
 
       <article class="content-card">
         <h3>8. Empfänger, Speicherdauer und Löschung</h3>
-        <p>Empfänger können Google bei der automatischen Billing-Betriebsdiagnostik und im Rahmen eines Play-Kaufs, GitHub beim Besuch dieser Website sowie beteiligte E-Mail-Dienstleister bei einer Kontaktaufnahme sein. Externe Dokumentanbieter werden allein durch Ihre bewusste Auswahl tätig. Wir verkaufen keine personenbezogenen Daten.</p>
+        <p>Empfänger können Google bei der automatischen Billing-Betriebsdiagnostik und im Rahmen eines Play-Kaufs, die von Ihnen im Android-Share-Chooser ausgewählte App für eine bewusst geteilte PDF, GitHub beim Besuch dieser Website sowie beteiligte E-Mail-Dienstleister bei einer Kontaktaufnahme sein. Externe Dokumentanbieter und Share-Ziele werden allein durch Ihre bewusste Auswahl tätig. Wir verkaufen keine personenbezogenen Daten.</p>
         <ul>
           <li>Lokale Notizen können in der App gelöscht werden.</li>
           <li>Beim Entfernen eines Dokuments aus dem Verlauf werden zugehörige lokale Metadaten, Lesezeichen und Notizen gelöscht; die Original-PDF bleibt unverändert.</li>
@@ -177,6 +178,7 @@
         <p>Document metadata and saved notes are held in a local Room database; settings use DataStore. Search text and the unsaved note draft only become a durable Room note after an explicit save action, but <code>rememberSaveable</code> may retain them in system-managed restoration state until that UI state is discarded or replaced, or Android discards it. Android's app and state management protects these areas and regular Android backup is disabled, but they are not additionally encrypted at present. The app does not keep a permanent PDF copy in its database and does not alter the original file merely by reading it or adding local page notes.</p>
         <p>If a document provider is not directly seekable, the app may briefly create an unencrypted staging copy in the private <code>pdf-provider-staging</code> app cache. Its size is technically limited. The copy is removed immediately after transfer to the PDF engine and is also cleaned up on error, cancellation, session end, and restart paths. Despite the app sandbox, a residual risk remains until cleanup completes.</p>
         <p>A deliberate selection through Android's system file picker may grant Majesto persistent read access to that specific document URI. A confirmed grant remains after the app closes so that the document can be reopened from history. Majesto releases it when the document is successfully removed from history; Android or the document provider may also revoke it, and clearing app data or uninstalling the app ends app-related access. Where document access is only temporary, Majesto stores no history, position, bookmarks, or notes for that document. External document providers – for example, a cloud storage app you choose – act independently and may process data under their own privacy terms. Majesto itself does not upload a PDF to the cloud.</p>
+        <p>If you choose “Share PDF” in the reader, Majesto passes the open document URI with temporary read permission through Android's system chooser to the external app you then select. Majesto does not preselect a recipient and does not upload the file itself. From that hand-off onward, the destination app processes the PDF under its own privacy, storage, and network rules. Share confidential documents only with destination apps and recipients you trust.</p>
         <p>Where processing attributable to us is necessary to provide features you expressly request, the legal basis is Article 6(1)(b) GDPR. Security and reliability measures additionally rely on our legitimate interest in a secure, reliable app under Article 6(1)(f) GDPR. Most of this processing takes place solely under your control on the device; we cannot access this local content.</p>
       </article>
 
@@ -214,7 +216,7 @@
 
       <article class="content-card">
         <h3>8. Recipients, retention, and deletion</h3>
-        <p>Recipients may include Google for automatic Billing operational diagnostics and a Play purchase, GitHub when you visit this website, and the email services involved when you contact us. External document providers act only following your deliberate selection. We do not sell personal data.</p>
+        <p>Recipients may include Google for automatic Billing operational diagnostics and a Play purchase, the app you select in Android's share chooser for a deliberately shared PDF, GitHub when you visit this website, and the email services involved when you contact us. External document providers and share destinations act only following your deliberate selection. We do not sell personal data.</p>
         <ul>
           <li>Local notes can be deleted in the app.</li>
           <li>Removing a document from history deletes its local metadata, bookmarks, and notes; the original PDF remains unchanged.</li>
